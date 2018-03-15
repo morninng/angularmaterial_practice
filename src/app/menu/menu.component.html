@@ -1,3 +1,41 @@
-<p>
-  menu works!
-</p>
+<br>a<br><br>a<br>
+
+abc abc abc abc<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+<br>a<br>a<br>a<br>a<br>
+
+
+<br>a<br><br>a<br>
+
+dd ee ff gg
+<button style="background-color:red" mat-button 
+      [matMenuTriggerFor]="menu2"
+      >Menu</button>
+
+
+<mat-menu overlapTrigger=false (closed)="menu_closed(event)"  yPosition="below" #menu2="matMenu" class="outer_padding" >
+  <span class="arrow_box_inner">
+    <button mat-menu-item>Item a a a </button>
+    <button mat-menu-item>Item b b b b</button>
+  </span>
+</mat-menu>
+
+
+<br>a<br>a<br>a<br>a<br>
+
+ <div class="ccc">
+bbbbbb
+
+</div> 
+
+
+<br>a<br>a<br>a<br>a<br>
+<div class="arrow_box">
+  sdfasdfasdf<br>
+  asdfasdf
+</div>
+<br>a<br>a<br>a<br>a<br>

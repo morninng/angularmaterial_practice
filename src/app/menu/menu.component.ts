@@ -12,4 +12,8 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  menu_closed(event){
+    console.log('close', event);
+  }
+
 }

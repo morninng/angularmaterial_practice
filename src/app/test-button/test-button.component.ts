@@ -11,5 +11,8 @@ export class TestButtonComponent implements OnInit {
 
   ngOnInit() {
   }
+  aaa() {
+    console.log('aaa');
+  }
 
 }

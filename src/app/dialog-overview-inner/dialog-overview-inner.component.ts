@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+
+import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+
 
 @Component({
   selector: 'app-dialog-overview-inner',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogOverviewInnerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewInnerComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {
+    console.log('constructor of DialogOverviewInnerComponent');
+    console.log('injected data', data);
+   }
 
   ngOnInit() {
+    console.log('ngoninit DialogOverviewInnerComponent');
+  }
+
+  close_modal() {
+    this.dialogRef.close('aaabbbcccc');
   }
 
 }
